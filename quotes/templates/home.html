@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Password Generator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{% static 'myfirst.css'%}">
+  <script src="{% static 'myfirst.js' %}"></script>
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <div class="main">
+    <div class="sidenav">
+      <a href="#">profile</a>
+      <a href="#">home</a>
+      <a href="#">saved</a>
+
+    </div>
+
+    <div class="title">
+      <h1>Password Generator</h1>
+    </div>
+    <div class="form">
+      <form>
+        <input type="text" id="pass">
+        <button onclick="copy_func()" class="copy-button">copy</button><br>
+        <div class="checkboxes">
+          <label for="accept">
+            <input onclick="lowercase_func()" type="checkbox" id="accept" name="lowercase" value="lowercase"> lowercase
+            </input><br>
+          </label>
+          <label for="accept1">
+            <input onclick="uppercase_func()" type="checkbox" id="accept1" name="uppercase" value="uppercase"> uppercase
+            </input><br>
+          </label>
+          <label for="accept2">
+            <input onclick="symbols_func()" type="checkbox" id="accept2" name="symbols" value="symbols"> symbols
+            </input><br>
+          </label>
+          <label for="accept3">
+            <input onclick="numbers_func()" type="checkbox" id="accept3" name="numbers" value="numbers"> numbers
+            </input><br>
+          </label>
+          <form action="/url" method="GET"><br>
+            <input type="text" placeholder="length" class="number" /><br>
+          </form>
+          <div class="generate">
+            <button onclick="generate_func()" class="generate-button">generate</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  <p id='labelTag'></p>
+
+
+</body>
+
+</html>
